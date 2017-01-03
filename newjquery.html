@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<title>l</title>
+   <style>
+     .panel{
+       margin-left:10%;
+       width:100px;
+       background-color:red;
+       color:blue;
+       height:100px;
+       display:none;
+       }
+      .pullme{
+        margin-left:10%;
+        width:10px;
+        height:10px;
+        background-color:blue;
+        color:red;
+        display:block;
+        }
+  </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+         {
+             $('.pullme').click(function()
+                  {
+                     $('.panel').slideToggle('slow');
+                   });
+          });
+
+</script>
+ </head>
+ <body>
+   <div class='panel'>hello</div>
+    <div class='pullme'>pull/drag</div>
+ </body>
+</html>
