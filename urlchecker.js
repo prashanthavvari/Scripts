@@ -58,9 +58,9 @@ module.exports = function(){
       iterateFolders(publicFolder);
     }
     function skipPing(url) {
-      if (currentDir.includes('zohobooks_website')) {
+      if (currentDir.includes('host')) {
         return url.indexOf('/help/') === -1 && url.indexOf('/kb/') === -1;
-      } else if (currentDir.includes('zohobooks_guides')) {
+      } else if (currentDir.includes('host')) {
         return url.indexOf('/help/') !== -1 || url.indexOf('/kb/') !== -1 || url.indexOf('/gst/') !== -1 || url.indexOf('/vat/') !== -1;
       }
     }
@@ -72,7 +72,7 @@ module.exports = function(){
       urls = new Set(urls.split('\n')).toArray();
       log( typeof (urls) );
       urls.forEach((url)=> {
-        if (url.indexOf('http') === -1 && url.indexOf('/books')!==-1 && url.indexOf('..') === -1 && skipPing(url) && url.indexOf('.css') === -1 && url.indexOf('.js') === -1) {
+        if (url.indexOf('http') === -1 && url.indexOf('/localhost')!==-1 && url.indexOf('..') === -1 && skipPing(url) && url.indexOf('.css') === -1 && url.indexOf('.js') === -1) {
           if (url[0] !== '/') {
             url = '/' + url;
           }

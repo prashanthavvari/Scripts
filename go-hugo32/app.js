@@ -1,6 +1,6 @@
 const fs = require('fs');
 const process = require('process');
-let pathVal = '/Users/prashan-5380/Home/web/zohobooks/workspace/zohobooks_website/content/';
+let pathVal = '/';
 
 
 function getDirListing(pathVal) {
